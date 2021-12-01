@@ -19,7 +19,7 @@ public class Mapa implements Serializable{
     @Column(nullable = false)
     private String nome;
     @ManyToMany
-    @JoinTable(name = "tb_local", joinColumns = {@JoinColumn(name = "local_id")}, //agregacao, vai gerar uma tabela associativa.
+    @JoinTable(name = "tb_mapa_local", joinColumns = {@JoinColumn(name = "local_id")}, //agregacao, vai gerar uma tabela associativa.
                                        inverseJoinColumns = {@JoinColumn(name = "mapa_id")})
     private List<Local> locais;
 

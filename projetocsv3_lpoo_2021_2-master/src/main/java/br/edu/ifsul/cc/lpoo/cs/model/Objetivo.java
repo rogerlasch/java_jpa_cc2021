@@ -24,7 +24,7 @@ public class Objetivo implements Serializable{
     @Column(nullable = false)
     private Integer pontos;
     @ManyToMany
-    @JoinTable(name = "tb_local", joinColumns = {@JoinColumn(name = "local_id")}, //agregacao, vai gerar uma tabela associativa.
+    @JoinTable(name = "tb_objetivo_local", joinColumns = {@JoinColumn(name = "local_id")}, //agregacao, vai gerar uma tabela associativa.
                                        inverseJoinColumns = {@JoinColumn(name = "objetivo_id")})
     private List<Local> locais;
     

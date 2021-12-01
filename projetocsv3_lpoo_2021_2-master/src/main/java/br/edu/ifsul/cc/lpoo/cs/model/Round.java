@@ -27,7 +27,7 @@ public class Round {
     @Temporal(TemporalType.TIMESTAMP)
     private Calendar fim;
     @ManyToMany
-    @JoinTable(name = "tb_objetivo", joinColumns = {@JoinColumn(name = "objetivo_id")}, //agregacao, vai gerar uma tabela associativa.
+    @JoinTable(name = "tb_round_objetivo", joinColumns = {@JoinColumn(name = "objetivo_id")}, //agregacao, vai gerar uma tabela associativa.
                                        inverseJoinColumns = {@JoinColumn(name = "round_id")})
     private List<Objetivo> objetivos;
 
